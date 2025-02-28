@@ -11,6 +11,7 @@ import Foundation
 
 
 var categories: [Category] = load("categories.json")
+var events: [Event] = []
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

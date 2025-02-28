@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct MyCalendar: View{
+    @State private var selectedDate: DateComponents?
+  
     var body: some View{
-            CalendarView(interval: DateInterval(start:.distantPast, end: .distantFuture)
-        )
+        VStack{
+            ScrollView{
+                CalendarView(interval: DateInterval(start: .distantPast, end: .distantFuture), selectedDate: $selectedDate)
+            }
+        }
     }
 }
