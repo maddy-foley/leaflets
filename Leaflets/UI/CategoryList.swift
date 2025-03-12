@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
-
+import SwiftData
 
 struct CategoryList: View {
+    @Query private var categories: [Category]
     var body: some View {
-            NavigationSplitView{
+        VStack{
+            NavigationSplitView {
+
                 List(categories, id: \.id) { category in
                     NavigationLink{
                         CategoryDetail(category: category)
@@ -22,6 +25,8 @@ struct CategoryList: View {
             } detail: {
                 
             }
+                
         }
+    }
 
 }

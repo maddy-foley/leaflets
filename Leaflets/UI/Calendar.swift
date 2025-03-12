@@ -66,7 +66,6 @@ class Coordinator: NSObject, UICalendarViewDelegate, UICalendarSelectionSingleDa
                     day: 14
                 )
                 
-                // Create a calendar decoration for Valentine's day.
                 let heart = UICalendarView.Decoration.image(
                     UIImage(systemName: "heart.fill"),
                     color: UIColor.red,
@@ -117,68 +116,3 @@ class Coordinator: NSObject, UICalendarViewDelegate, UICalendarSelectionSingleDa
       }
 }
 
-//
-//class CalendarViewDelegate: NSObject, UICalendarViewDelegate {
-//    var calendarView: UICalendarView? = nil
-//    var decorations: [Date?: UICalendarView.Decoration]
-//    
-//    override init() {
-//        
-//        let valentinesDay = DateComponents(
-//            calendar: Calendar(identifier: .gregorian),
-//            year: 2025,
-//            month: 2,
-//            day: 14
-//        )
-//        
-//        let heart = UICalendarView.Decoration.image(
-//            UIImage(systemName: "heart.fill"),
-//            color: UIColor.red,
-//            size: .large
-//        )
-//        
-//        decorations = [valentinesDay.date: heart]
-//    }
-//    
-//    func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-//        
-//        let day = DateComponents(
-//            calendar: dateComponents.calendar,
-//            year: dateComponents.year,
-//            month: dateComponents.month,
-//            day: dateComponents.day
-//        )
-//        
-//        return decorations[day.date]
-//    }
-//    
-//    func dateSelection(
-//        _ selection: UICalendarSelectionSingleDate,
-//        canSelectDate dateComponents: DateComponents?
-//    ) -> Bool {
-//        
-//        return dateComponents != nil
-//    }
-//    
-//    func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
-//        
-//    }
-//    func add(decoration: UICalendarView.Decoration, on date: Date) {
-//        
-//        let dateComponents = Calendar.current.dateComponents(
-//            [.calendar, .year, .month, .day ],
-//            from: date
-//        )
-//        
-//        
-//        decorations[dateComponents.date] = decoration
-//        
-//        
-//        if let calendarView {
-//            calendarView.reloadDecorations(
-//                forDateComponents: [dateComponents],
-//                animated: true
-//            )
-//        }
-//    }
-//}

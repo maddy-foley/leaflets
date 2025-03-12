@@ -13,9 +13,7 @@ struct MyCalendar: View{
   
     var body: some View{
         VStack{
-            ScrollView{
-                CalendarView(interval: DateInterval(start: .distantPast, end: .distantFuture), selectedDate: $selectedDate)
-            }
+            CalendarView(interval: DateInterval(start: .distantPast, end: .distantFuture), selectedDate: $selectedDate)
         }
     }
 }
